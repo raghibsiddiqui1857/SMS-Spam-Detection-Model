@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam SMS Detector</title>
+</head>
+<body>
+    <h2>Spam SMS Detection</h2>
+    <form method="POST" action="/predict">
+        <input type="text" name="sms" placeholder="Enter SMS text" size="60" required>
+        <button type="submit">Check</button>
+    </form>
+    {% if prediction %}
+        <p><strong>Message:</strong> {{ sms }}</p>
+        <p><strong>Result:</strong> {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
